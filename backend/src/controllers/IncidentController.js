@@ -31,7 +31,7 @@ module.exports = {
 
         const incident = await connection('incidents').where('id', id).select('ong_id').first();
 
-        if (!sincident)
+        if (!incident)
             return response.status(404).json({error: 'Incident not founded'});
         
         if (incident.ong_id != ong_id)

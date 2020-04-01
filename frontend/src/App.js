@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './global.css';
+import Routes from './routes';
+
+ // JSX (JavaScript XML) (Quando HTML ta integrado dentro do JS)
+ // Componente é uma função que retorna HTML
+ // Propriedades são como atributos do HTML
+ // Estado: toda vez a variavel é alterado, renderiza novamente na dom
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes />
   );
 }
 
 export default App;
+
+/*
+    useState retorna um array
+    0: valor da variavel
+    1: função para alterar o valor
+  */
+//  let [counter, setCounter] = useState(0);
+
+//  function increment() {
+//    // Um variavel de estado é imutável (questão de performace)
+//    // O que é feito então é que nós temos que substituir o valor do estado
+//    setCounter(++counter);
+//  }
+
+//  return (
+//    <div>
+//      <Header>Contador: {counter}</Header>
+//      <button onClick={increment}>Incrementar</button>
+//    </div>
+//  );
